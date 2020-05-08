@@ -26,7 +26,7 @@ libft:
 
 $(NAME): $(OBJS_DIR) $(LEMIN_O) libft
 	@gcc $(FLAGS) $(LEMIN_O) -L $(LIB_PATH) -lft -o $(NAME)
-	@echo "$(NAME_1) created"
+	@echo "$(NAME) created"
 
 $(OBJS_PATH)%.o: $(SRCS_PATH)%.c
 	@gcc $(FLAGS) -c $< -o $@
