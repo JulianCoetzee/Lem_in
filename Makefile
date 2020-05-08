@@ -1,4 +1,4 @@
-NAME = lem-in
+NAME = lemin
 
 LIB_PATH = ./libft/
 
@@ -10,11 +10,11 @@ OBJS_PATH = ./objs/
 
 OBJS_DIR = objs
 
-LEM-IN_SRCS = $(NAME).c\
+LEMIN_SRCS = $(NAME).c\
 
-LEM-IN_C = $(addprefix $(OBJS_PATH), $(LEM-IN_SRCS))
+LEMIN_C = $(addprefix $(OBJS_PATH), $(LEMIN_SRCS))
 
-LEM-IN_O = $(patsubst %.c, %.o, $(LEM-IN_C))
+LEMIN_O = $(patsubst %.c, %.o, $(LEMIN_C))
 
 all: $(NAME)
 
@@ -24,8 +24,8 @@ $(OBJS_DIR):
 libft:
 	@$(MAKE) -C $(LIB_PATH)/
 
-$(NAME): $(OBJS_DIR) $(LEM-IN_O) libft
-	@gcc $(FLAGS) $(LEM-IN_O) -L $(LIB_PATH) -lft -o $(NAME)
+$(NAME): $(OBJS_DIR) $(LEMIN_O) libft
+	@gcc $(FLAGS) $(LEMIN_O) -L $(LIB_PATH) -lft -o $(NAME)
 	@echo "$(NAME_1) created"
 
 $(OBJS_PATH)%.o: $(SRCS_PATH)%.c
