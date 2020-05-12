@@ -11,6 +11,11 @@ OBJS_PATH = ./objs/
 OBJS_DIR = objs
 
 LEMIN_SRCS = $(NAME).c\
+				roomcheck.c\
+				error.c\
+				freedom.c\
+				reader.c\
+				validate_input.c\
 
 LEMIN_C = $(addprefix $(OBJS_PATH), $(LEMIN_SRCS))
 
