@@ -36,9 +36,9 @@ int validate_line(t_room **map, char *line, int *start, int *end)
 // count array size (1 = link, 3 = room), error if not
 // checks valid sizes with further functions
 
-int valid_format(t_room **map, char line, int *start, int *end)
+int valid_format(t_room **map, char *line, int *start, int *end)
 {
-    char        *arr;
+    char        **arr;
     int         i;
     static int  link;
 
@@ -59,7 +59,7 @@ int valid_format(t_room **map, char line, int *start, int *end)
     }
     else if (i == 1)
     {
-        link == 1;
+        link = 1;
         free_array(arr);
         return (ft_links(map, line));
     }

@@ -15,14 +15,14 @@ int     get_ants(void)
     if (ft_can_atoi(line) != 1)
     {
         ft_memdel((void**)&line);
-        err_out(3);
+        error_out(3);
         exit(1);
     }
     ants = ft_atoi(line);
     ft_memdel((void**)&line);
     if (ants < 1)
     {
-        err_out(3);
+        error_out(3);
         exit(1);
     }
 	ft_putnbr(ants);
@@ -48,16 +48,16 @@ void    get_map(t_room **map)
             ft_putendl(line);
         if (validate_line(map, line, &start, &end) == 0)
         {
-            //free_map?
+            free_map(map);
             ft_memdel((void**)&line);
-            err_out(1);
+            error_out(1);
         }
         ft_memdel((void**)&line);
     }
     ft_memdel((void**)&line);
-    if (start != -1 || end != -1 || is_duplicates(map) == 1)
+    if (start != -1 || end != -1 || is_duplicate(map) == 1)
     {
-        //free_map?
+        free_map(map);
         if (start != -1 || end != -1)
             error_out(2);
         else

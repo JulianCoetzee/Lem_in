@@ -13,7 +13,7 @@ void	error_out(int errtype)
 	else if (errtype == 5)
 		ft_putendl_fd("ERROR DUPLICATE ROOM", 2);
 	else if (errtype == 6)
-		ft_putendl_fd("ERROR room linking failed", 2);
+		ft_putendl_fd("ERROR LINKING FAILED", 2);
 	else if (errtype == 8)
 		ft_putendl_fd("ERROR WUT", 2);
 	exit(1);
