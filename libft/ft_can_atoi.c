@@ -43,7 +43,7 @@ int			ft_can_atoi(char *str)
 		imax++;
 	}
 	if (*imax || (!str[i] && !lorge))
-		return (1);
+		return (1 + is_space(str[0]) + (str[i] != '\0'));
 	else
 		return (0);
 	return (-1);
@@ -51,6 +51,7 @@ int			ft_can_atoi(char *str)
 
 /*
 ** returns 1 if can true
-** returns 0 if str wont fit in  integer
+** returns >1 if spaces or non digits before or after first number
+** returns 0 if str wont fit in an integer
 ** it should not get to the return -1
 */
