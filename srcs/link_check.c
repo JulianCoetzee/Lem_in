@@ -36,9 +36,9 @@ int link_split(t_room **map, char *line)
     i = 0;
     room = *map;
     door = *map;
-    while (split_line[i])
+    while (split_line[i] != NULL)
         i++;
-    if (i >= 2)
+    if (i >= 3)
         return (0);
     while (room != NULL && ft_strcmp(split_line[0], room->name))
         room = room->next;
