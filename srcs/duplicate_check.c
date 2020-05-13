@@ -5,10 +5,10 @@
 
 int is_duplicate(t_room **map)
 {
-    if (!duplicate_name(map) || !duplicate_coordinates(map))
-        return (0);
-    else
+    if (duplicate_name(map) == 1 || duplicate_coordinates(map) == 1)
         return (1);
+    else
+        return (0);
 }
 
 int duplicate_name(t_room **map)
