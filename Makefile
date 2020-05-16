@@ -14,6 +14,7 @@ LEMIN_SRCS = $(NAME).c\
 				duplicate_check.c\
 				error.c\
 				freedom.c\
+				freedomII.c\
 				link_check.c\
 				links.c\
 				reader.c\
