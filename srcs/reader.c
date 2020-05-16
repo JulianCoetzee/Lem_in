@@ -18,7 +18,7 @@ int     get_ants(void)
         error_out(3);
         exit(1);
     }
-    ants = ft_atoi(line);
+    ants = ft_atoll(line);
     ft_memdel((void**)&line);
     if (ants < 1)
     {

@@ -24,10 +24,10 @@ typedef struct  s_march
 {
     int			i;
 	int			path_size_sum;
-	int			route_total;
-	int			ant_total;
+	int			route_tot;
+	int			ant_tot;
 	int			*ants;
-	int			*path_sizes;
+	int			*dist;
 }               t_march;
 
 void            add_links(t_room ***tmp_links, t_room ***set_links, t_room **door, int array_size);
@@ -56,5 +56,15 @@ void            move_out(t_move *move, int paths);
 t_room          *new_room(void);
 int		        validate_line(t_room **map, char *line, int *start, int *end);
 int             valid_format(t_room **map, char *line, int *start, int *end);
+//marchy
+void			free_march_array(t_march *march);
+void			march_ant(char ***route, int i_ant);
+void    		sep_ant(t_march *march);
+int				route_quan(int n, int *dist);
+//movey
+void			sing_route(char **route, int i_ant, int dist);
+void			ant_turn(t_move *move, int i, int dist);
+t_move			*make_move(char **route, int dist);
+void			put_move(t_move *move, int dist, int is, int j);
 
 #endif

@@ -21,6 +21,9 @@ LEMIN_SRCS = $(NAME).c\
 				room_check.c\
 				rooms.c\
 				validate_input.c\
+				king_jul.c\
+				i_walk_alone.c\
+				two_roads_div.c\
 
 LEMIN_C = $(addprefix $(OBJS_PATH), $(LEMIN_SRCS))
 
