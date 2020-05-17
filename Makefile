@@ -1,4 +1,4 @@
-NAME = lemin
+NAME = lem-in
 
 LIB_PATH = ./libft/
 
@@ -10,7 +10,7 @@ OBJS_PATH = ./objs/
 
 OBJS_DIR = objs
 
-LEMIN_SRCS = $(NAME).c\
+LEMIN_SRCS = lemin.c\
 				duplicate_check.c\
 				error.c\
 				freedom.c\
