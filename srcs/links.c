@@ -3,7 +3,8 @@
 
 // adds links to enlarged array for given room (after copying existing links)
 
-void    add_links(t_room ***tmp_links, t_room ***set_links, t_room **door, int array_size)
+void    add_links(t_room ***tmp_links, t_room ***set_links,
+                            t_room **door, int array_size)
 {
     int i;
 
