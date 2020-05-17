@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   lemin.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/17 18:56:12 by jules             #+#    #+#             */
+/*   Updated: 2020/05/17 18:56:13 by jules            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LEMIN_H
 # define LEMIN_H
 # include "../libft/libft.h"
@@ -52,9 +64,39 @@ void            get_map(t_room **map);
 int             is_duplicate(t_room **map);
 int             link_array(t_room **room, t_room **door);
 int             link_split(t_room **map, char *line);
-void            move_out(t_move *move, int paths);
 t_room          *new_room(void);
 int		        validate_line(t_room **map, char *line, int *start, int *end);
 int             valid_format(t_room **map, char *line, int *start, int *end);
+
+//fail safe tests
+
+int	path_count(char ***routes);
+int	path_size(char **path);
+int	*path_sizes(char ***routes, int route_total);
+int path_size_sum(int *path_sizes);
+int ant_routes_used(int ant_total, int *path_sizes);
+void    ant_march(char ***paths, int ant_total);
+void    single_file(char **path, int ant_total, int path_size);
+void    ant_turn(t_move *move, int next_ant, int path_size);
+void    ant_columns(t_march *move_out);
+void    columns(char ***paths, t_march *move_out);
+int     turn_total(t_march *move_out);
+void    turn_loop(t_march *move_out, t_move **moves);
+int     multi_move_check(t_move *move, int path_size);
+void    out_loop(t_march *move_out, t_move **moves);
+t_move	*make_move(char **path, int path_size);
+t_move	**make_moves(char ***path, int *path_sizes, int route_total);
+void            move_output(t_move *move, int paths);
+void    free_paths(char ****paths_pointer);
+
+// pathing alsitor
+
+char			**ft_path(t_room *room);
+char			**ft_excl_path(t_room *room);
+char			**ft_minpath(t_room *rooms);
+int		st_maxpaths(t_room *rooms);
+void	st_pathclear(t_room *rooms);
+char	***ft_pathfind(t_room *rooms);
+
 
 #endif

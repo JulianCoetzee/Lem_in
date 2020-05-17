@@ -21,6 +21,13 @@ LEMIN_SRCS = $(NAME).c\
 				room_check.c\
 				rooms.c\
 				validate_input.c\
+				ft_minpath.c\
+				ft_pathfind.c\
+				march.c\
+				moves.c\
+				output.c\
+				pather.c\
+				turns.c\
 
 LEMIN_C = $(addprefix $(OBJS_PATH), $(LEMIN_SRCS))
 
