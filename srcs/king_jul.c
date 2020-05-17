@@ -6,7 +6,7 @@
 /*   By: giantewok <giantewok@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/17 18:56:39 by giantewok         #+#    #+#             */
-/*   Updated: 2020/05/17 18:58:29 by giantewok        ###   ########.fr       */
+/*   Updated: 2020/05/17 20:16:40 by giantewok        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,4 @@ void           move_ant(char ***route, int i_ant)
 	}
 	free_int_array(&(march->ants));
 	free_int_array(&(march->dist));
-	free_march_array(march);
 }

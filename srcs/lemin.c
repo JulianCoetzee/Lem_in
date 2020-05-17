@@ -17,7 +17,6 @@ int		main(int argc, char **argv)
 		free_map(&map);
 		return (0);
 	}
-//where the pathfinder goes >...<
 	if (!(route = ft_pathfind(map)))
 	{
 		free_map(&map);

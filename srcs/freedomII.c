@@ -25,8 +25,8 @@ void    free_march_array(t_march *march)
 
 void    free_int_array(int **arr)
 {
-    free(*arr);
-    *arr = NULL;
+	free(*arr);
+	*arr = NULL;
 }
 
 void	free_route(char ****route_loc)

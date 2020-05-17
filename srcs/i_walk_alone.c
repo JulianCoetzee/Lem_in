@@ -6,7 +6,7 @@
 /*   By: giantewok <giantewok@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/17 18:57:11 by giantewok         #+#    #+#             */
-/*   Updated: 2020/05/17 18:58:28 by giantewok        ###   ########.fr       */
+/*   Updated: 2020/05/17 20:15:50 by giantewok        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ t_move	*make_move(char **route, int dist)
 	t_move	*move;
 
 	i = 0;
-	move = (t_move*)ft_memalloc(sizeof(t_move) * dist + 1);
+	move = (t_move*)ft_memalloc(sizeof(t_move) * (dist + 1));
 	while (i < dist)
 	{
 		(move[i]).room = route[i + 1];
