@@ -1,6 +1,6 @@
 #include "lemin.h"
 
-void	put_move(t_move *move, int dist, int is, int j)
+void	put_move(t_move *move, int dist, int is)
 {
 	int	i;
 
@@ -61,7 +61,7 @@ void	sing_route(char **route, int i_ant, int dist)
 	while (i < i_ant + dist)
 	{
 		ant_turn(move, (i <= i_ant) ? i : 0, dist);
-		put_move(move, dist, 1, 0);
+		put_move(move, dist, 1);
 		ft_putchar('\n');
 		i++;
 	}

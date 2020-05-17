@@ -18,6 +18,11 @@ int		main(int argc, char **argv)
 		return (0);
 	}
 //where the pathfinder goes >...<
+	if (!(route = ft_pathfind(map)))
+	{
+		free_map(&map);
+		return(-1);
+	}
 	ft_putchar('\n');
 	march_ant(route, ants);
 	free_map(&map);

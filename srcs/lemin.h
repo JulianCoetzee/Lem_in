@@ -57,6 +57,7 @@ t_room          *new_room(void);
 int		        validate_line(t_room **map, char *line, int *start, int *end);
 int             valid_format(t_room **map, char *line, int *start, int *end);
 //marchy
+void			free_int_array(int **array);
 void			free_march_array(t_march *march);
 void			march_ant(char ***route, int i_ant);
 void    		sep_ant(t_march *march);
@@ -65,11 +66,20 @@ int				route_quan(int n, int *dist);
 void			sing_route(char **route, int i_ant, int dist);
 void			ant_turn(t_move *move, int i, int dist);
 t_move			*make_move(char **route, int dist);
-void			put_move(t_move *move, int dist, int is, int j);
+void			put_move(t_move *move, int dist, int is);
 //movey multo
 void			multi_route(char ***route, t_march *march);
 void			put_iter(t_march *march, t_move **moves);
 void			turn_iter(t_march *march, t_move **moves);
 int				turn_quan(t_march *march);
+//path testing ish
+char			**ft_minpath(t_room *rooms);
+char			**ft_excl_path(t_room *room);
+char			**ft_path(t_room *room);
+void			ft_printpath(char ***paths);
+char			***ft_pathfind(t_room *rooms);
+void			st_findpaths(char ***paths, t_room *rooms);
+void			st_pathclear(t_room *rooms);
+int				st_maxpaths(t_room *rooms);
 
 #endif

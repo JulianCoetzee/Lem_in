@@ -18,7 +18,7 @@ int		route_quan(int n, int *dist)
 		splits++;
 	}
 	if (dist[2])
-		splits += route_num(i - 1, dist + 1);
+		splits += route_quan(i - 1, dist + 1);
 	return (splits);
 }
 

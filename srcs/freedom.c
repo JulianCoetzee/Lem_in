@@ -49,8 +49,3 @@ void    free_links(t_room *room)
     free(room->links);
     room->links = NULL;
 }
-
-void    free_int_array(int **arr)
-{
-    ft_memdel((void**)arr);
-}

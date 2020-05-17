@@ -24,3 +24,9 @@ void    free_march_array(t_march *march)
 	free(march);
 	march = NULL;
 }
+
+void    free_int_array(int **arr)
+{
+    free(*arr);
+    *arr = NULL;
+}

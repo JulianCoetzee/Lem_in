@@ -43,7 +43,7 @@ void		put_iter(t_march *march, t_move **moves)
 	j = 0;
 	while (j <= march->route_tot)
 	{
-		put_move(moves[j], march->dist[j], 0, j);
+		put_move(moves[j], march->dist[j], 0);
 		j++;
 		ft_putstr("CLEAR");
 		if (check_move(moves[j], march->dist[j]))
