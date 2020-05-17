@@ -20,31 +20,6 @@ static void		st_put_linklen(t_room *node, int len)
 	}
 }
 
-/*
-** Fills in all the (*links)->len and (*links)->prev
-*/
-
-char			**ft_path(t_room *room)
-{
-	char	**path;
-	int		len;
-	t_room	*temp;
-
-	len = 0;
-	temp = room;
-	while (temp && ++len)
-		temp = temp->prev;
-	if (!(path = (char **)malloc(sizeof(char *) * (len + 1))))
-		return (NULL);
-	path[len] = NULL;
-	while (len)
-	{
-		path[--len] = room->name;
-		room = room->prev;
-	}
-	return (path);
-}
-
 char			**ft_excl_path(t_room *room)
 {
 	char	**path;

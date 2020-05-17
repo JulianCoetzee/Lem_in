@@ -97,23 +97,23 @@ char	***ft_pathfind(t_room *rooms)
 }
 
 /*
-** Prints each path on a new line, for testing
-*/
+// ** Prints each path on a new line, for testing
+// */
 
-void	ft_printpath(char ***paths)
-{
-	int i;
-	int k;
+// void	ft_printpath(char ***paths)
+// {
+// 	int i;
+// 	int k;
 
-	k = 0;
-	while (paths[k])
-	{
-		i = 0;
-		printf("path %d\n", k);
-		while (paths[k][i] && paths[k][i + 1])
-			printf("%s to ", paths[k][i++]);
-		printf("%s", paths[k][i]);
-		printf("\n");
-		k++;
-	}
-}
+// 	k = 0;
+// 	while (paths[k])
+// 	{
+// 		i = 0;
+// 		printf("path %d\n", k);
+// 		while (paths[k][i] && paths[k][i + 1])
+// 			printf("%s to ", paths[k][i++]);
+// 		printf("%s", paths[k][i]);
+// 		printf("\n");
+// 		k++;
+// 	}
+// }

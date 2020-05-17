@@ -78,8 +78,8 @@ int				st_maxpaths(t_room *rooms);
 void			st_pathclear(t_room *rooms);
 void			st_findpaths(char ***paths, t_room *rooms);
 char			***ft_pathfind(t_room *rooms);
-void			ft_printpath(char ***paths);
-char			**ft_path(t_room *room);
+//void			ft_printpath(char ***paths);
+// char			**ft_path(t_room *room);
 char			**ft_excl_path(t_room *room);
 char			**ft_minpath(t_room *rooms);
 
