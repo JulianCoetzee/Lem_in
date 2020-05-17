@@ -23,7 +23,7 @@ static int		dist_tot(int *dist)
 	sum = 0;
 	while (*dist)
 		sum += *(dist++);
-	return (dist);
+	return (sum);
 }
 
 void			multi_route(char ***route, t_march *march)
