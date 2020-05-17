@@ -45,7 +45,6 @@ void		put_iter(t_march *march, t_move **moves)
 	{
 		put_move(moves[j], march->dist[j], 0);
 		j++;
-		ft_putstr("CLEAR");
 		if (check_move(moves[j], march->dist[j]))
 			ft_putchar(' ');
 		else

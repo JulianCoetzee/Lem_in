@@ -62,6 +62,7 @@ void			free_march_array(t_march *march);
 void			move_ant(char ***route, int i_ant);
 void    		sep_ant(t_march *march);
 int				route_quan(int n, int *dist);
+void			free_route(char ****route_loc);
 //movey single
 void			sing_route(char **route, int i_ant, int dist);
 void			ant_turn(t_move *move, int i, int dist);

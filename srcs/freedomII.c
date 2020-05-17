@@ -2,7 +2,8 @@
 
 void    free_move(t_move **move)
 {
-	ft_memdel((void **)move);
+	free(*move);
+	*move = NULL;
 }
 
 void    free_move_array(t_move ***moves)
@@ -11,10 +12,7 @@ void    free_move_array(t_move ***moves)
 
 	i = 0;
 	while ((*moves)[i])
-	{
-		free_move(&(*moves)[i]);
-		i++;
-	}
+		free_move(&(*moves)[i++]);
 	free(*moves);
 	*moves = NULL;
 }
@@ -29,4 +27,20 @@ void    free_int_array(int **arr)
 {
     free(*arr);
     *arr = NULL;
+}
+
+void	free_route(char ****route_loc)
+{
+	int		i;
+	char	***routes;
+
+	routes = *route_loc;
+	i = 0;
+	while (routes[i])
+	{
+		free(routes[i]);
+		i++;
+	}
+	free(routes);
+	routes = NULL;
 }

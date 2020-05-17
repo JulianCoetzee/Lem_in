@@ -26,6 +26,7 @@ int		main(int argc, char **argv)
 	ft_putchar('\n');
 	move_ant(route, ants);
 	free_map(&map);
-    printf("%s", "INPUT VALID\n");
+	free_route(&route);
+	ft_putchar(' ');
 	return (0);
 }

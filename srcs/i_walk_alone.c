@@ -12,15 +12,14 @@ void	put_move(t_move *move, int dist, int is)
 			if (i++)
 			{
 				if (!is)
-					ft_putstr("CLEAR");
-				ft_putchar(' ');
+					ft_putchar(' ');
 			}
 			ft_putchar('L');
 			ft_putnbr((move[dist]).ant);
 			ft_putchar('-');
 			ft_putstr((move[dist]).room);
 			if (is)
-				ft_putstr("CLEAR");
+				return ;
 		}
 	}
 }
