@@ -23,7 +23,7 @@ typedef struct s_move
 typedef struct  s_march
 {
     int			i;
-	int			path_size_sum;
+	int			route_dist_tot;
 	int			route_tot;
 	int			ant_tot;
 	int			*ants;
@@ -61,10 +61,15 @@ void			free_march_array(t_march *march);
 void			march_ant(char ***route, int i_ant);
 void    		sep_ant(t_march *march);
 int				route_quan(int n, int *dist);
-//movey
+//movey single
 void			sing_route(char **route, int i_ant, int dist);
 void			ant_turn(t_move *move, int i, int dist);
 t_move			*make_move(char **route, int dist);
 void			put_move(t_move *move, int dist, int is, int j);
+//movey multo
+void			multi_route(char ***route, t_march *march);
+void			put_iter(t_march *march, t_move **moves);
+void			turn_iter(t_march *march, t_move **moves);
+int				turn_quan(t_march *march);
 
 #endif
