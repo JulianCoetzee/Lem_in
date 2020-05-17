@@ -43,4 +43,6 @@ void			multi_route(char ***route, t_march *march)
 			ft_putchar('\n');
 	}
 	free_move_array(&moves);
+	free_int_array(&(march->dist));
+	free_march_array(march);
 }

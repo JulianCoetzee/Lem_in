@@ -67,7 +67,7 @@ void			free_route(char ****route_loc);
 void			sing_route(char **route, int i_ant, int dist);
 void			ant_turn(t_move *move, int i, int dist);
 t_move			*make_move(char **route, int dist);
-void			put_move(t_move *move, int dist, int is);
+void			put_move(t_move *move, int dist);
 //movey multo
 void			multi_route(char ***route, t_march *march);
 void			put_iter(t_march *march, t_move **moves);

@@ -60,6 +60,6 @@ fclean:
 	@rm -f $(NAME)
 	@echo "$(NAME) deleted"
 
-re: fclean all
+re: fclean all clean
 
 .PHONY: all clean fclean libft re

@@ -19,8 +19,8 @@ void		turn_iter(t_march *march, t_move **moves)
 	int	j;
 
 	j = 0;
-	while (j <= march->route_tot && march->i
-             < march->ant_tot + march->route_dist_tot)
+	while (j <= march->route_tot && (march->i
+             < march->ant_tot + march->route_dist_tot))
 	{
 		ant_turn(moves[j], (march->ants[j]-- > 0) ? march->i++ : 0,
 				march->dist[j]);
@@ -43,7 +43,7 @@ void		put_iter(t_march *march, t_move **moves)
 	j = 0;
 	while (j <= march->route_tot)
 	{
-		put_move(moves[j], march->dist[j], 0);
+		put_move(moves[j], march->dist[j]);
 		j++;
 		if (check_move(moves[j], march->dist[j]))
 			ft_putchar(' ');

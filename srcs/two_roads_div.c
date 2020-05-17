@@ -23,7 +23,7 @@ int		route_quan(int n, int *dist)
 }
 
 /*
-**sep_ant: splits ants
+**sep_ant: splits ants up
 **
 */
 void    sep_ant(t_march *march)

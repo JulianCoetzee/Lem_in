@@ -27,6 +27,5 @@ int		main(int argc, char **argv)
 	move_ant(route, ants);
 	free_map(&map);
 	free_route(&route);
-	ft_putchar(' ');
 	return (0);
 }
