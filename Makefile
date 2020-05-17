@@ -23,6 +23,7 @@ LEMIN_SRCS = $(NAME).c\
 				validate_input.c\
 				king_jul.c\
 				i_walk_alone.c\
+				i_dont_walk_alone.c\
 				two_roads_div.c\
 				zombo_iteration.c\
 				test_min_p.c\

@@ -59,7 +59,7 @@ int             valid_format(t_room **map, char *line, int *start, int *end);
 //marchy
 void			free_int_array(int **array);
 void			free_march_array(t_march *march);
-void			march_ant(char ***route, int i_ant);
+void			move_ant(char ***route, int i_ant);
 void    		sep_ant(t_march *march);
 int				route_quan(int n, int *dist);
 //movey single

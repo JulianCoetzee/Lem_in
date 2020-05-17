@@ -24,7 +24,7 @@ int		main(int argc, char **argv)
 		return(-1);
 	}
 	ft_putchar('\n');
-	march_ant(route, ants);
+	move_ant(route, ants);
 	free_map(&map);
     printf("%s", "INPUT VALID\n");
 	return (0);

@@ -22,21 +22,21 @@ static int room_num(char **route)
 
 static int  *route_dist(char ***route, int t)
 {
-	int *l;
+	int *dist;
 	int i;
 	
 	i = 0;
-	if (!(l = (int*)ft_memalloc(sizeof(int) * (t + 1))))
+	if (!(dist = (int*)ft_memalloc(sizeof(int) * (t + 1))))
 		ft_putendl("Could not malloc route len.");
 	while (t > i)
 	{
-		l[i] = room_num(route[i]);
+		dist[i] = room_num(route[i]);
 		i++;
 	}
-	return(l);
+	return (dist);
 }
 
-void           march_ant(char ***route, int i_ant)
+void           move_ant(char ***route, int i_ant)
 {
 	t_march *march;
 
