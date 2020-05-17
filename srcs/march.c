@@ -6,7 +6,7 @@
 /*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/17 13:00:57 by jules             #+#    #+#             */
-/*   Updated: 2020/05/17 18:56:54 by jules            ###   ########.fr       */
+/*   Updated: 2020/05/17 21:00:15 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,5 +116,4 @@ void    columns(char ***paths, t_march *move_out)
         }
     }
     free_move_array(&moves);
-    free_paths(&paths);
 }

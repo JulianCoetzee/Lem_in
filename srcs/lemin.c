@@ -6,7 +6,7 @@
 /*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/17 18:56:50 by jules             #+#    #+#             */
-/*   Updated: 2020/05/17 18:56:51 by jules            ###   ########.fr       */
+/*   Updated: 2020/05/17 19:58:48 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int		main(int argc, char **argv)
 	// ft_putchar('\n');
 	// free_map(&map);
     // printf("%s", "INPUT VALID\n");
-	if (!(paths = ft_pathfind(map)))
+	if (!(paths = paths_found(map)))
 	{
 		free_map(&map);
 		return (0);

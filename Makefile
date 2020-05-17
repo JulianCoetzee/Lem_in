@@ -21,8 +21,8 @@ LEMIN_SRCS = $(NAME).c\
 				room_check.c\
 				rooms.c\
 				validate_input.c\
-				ft_minpath.c\
-				ft_pathfind.c\
+				pathfinder.c\
+				paths.c\
 				march.c\
 				moves.c\
 				output.c\
