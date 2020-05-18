@@ -17,7 +17,6 @@ int		main(int argc, char **argv)
 	int		ants;
 	char 	***paths;
 	t_room	*map;
-	// t_move	*move;
 
 	(void)argv;
 	(void)argc;
@@ -30,15 +29,11 @@ int		main(int argc, char **argv)
 		free_map(&map);
 		return (0);
 	}
-	// ft_putchar('\n');
-	// free_map(&map);
-    // printf("%s", "INPUT VALID\n");
 	if (!(paths = paths_found(map)))
 	{
 		free_map(&map);
 		return (0);
 	}
-	// ft_putchar('\n');
 	ant_march(paths, ants);
 	free_map(&map);
 	free_paths(&paths);

@@ -14,35 +14,35 @@
 
 void    free_move(t_move **move)
 {
-    ft_memdel((void **)move);
+	ft_memdel((void **)move);
 }
 
 void    free_move_array(t_move ***moves)
 {
-    int i;
+	int i;
 
-    i = 0;
-    while ((*moves)[i])
-    {
-        free_move(&(*moves)[i]);
-        i++;
-    }
-    free(*moves);
-    *moves = NULL;
+	i = 0;
+	while ((*moves)[i])
+	{
+		free_move(&(*moves)[i]);
+		i++;
+	}
+	free(*moves);
+	*moves = NULL;
 }
 
 void    free_paths(char ****paths_pointer)
 {
-    int i;
-    char ***paths;
+	int i;
+	char ***paths;
 
-    paths = *paths_pointer;
-    i = 0;
-    while (paths[i])
-    {
-        free(paths[i]);
-        i++;
-    }
-    free(paths);
-    paths = NULL;
+	paths = *paths_pointer;
+	i = 0;
+	while (paths[i])
+	{
+		free(paths[i]);
+		i++;
+	}
+	free(paths);
+	paths = NULL;
 }

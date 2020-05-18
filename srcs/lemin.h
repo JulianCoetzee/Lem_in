@@ -44,7 +44,8 @@ typedef struct  s_march
 	int			*path_sizes;
 }               t_march;
 
-void            add_links(t_room ***tmp_links, t_room ***set_links, t_room **door, int array_size);
+void            add_links(t_room ***tmp_links, t_room ***set_links,
+								 t_room **door, int array_size);
 t_room          *add_room(t_room **map);
 int             check_co_ords(char **arr);
 void            command_check(t_room **room, int *start, int *end);
@@ -80,33 +81,23 @@ char			**get_paths(t_room *rooms);
 
 //fail safe tests
 
-int	path_count(char ***routes);
-int	path_size(char **path);
-int	*path_sizes(char ***routes, int route_total);
-int path_size_sum(int *path_sizes);
-int ant_routes_used(int ant_total, int *path_sizes);
-void    ant_march(char ***paths, int ant_total);
-void    single_file(char **path, int ant_total, int path_size);
-void    ant_turn(t_move *move, int next_ant, int path_size);
-void    ant_columns(t_march *move_out);
-void    columns(char ***paths, t_march *move_out);
-int     turn_total(t_march *move_out);
-void    turn_loop(t_march *move_out, t_move **moves);
-int     multi_move_check(t_move *move, int path_size);
-void    out_loop(t_march *move_out, t_move **moves);
-t_move	*make_move(char **path, int path_size);
-t_move	**make_moves(char ***path, int *path_sizes, int route_total);
+int				path_count(char ***routes);
+int				path_size(char **path);
+int				*path_sizes(char ***routes, int route_total);
+int 			path_size_sum(int *path_sizes);
+int 			ant_routes_used(int ant_total, int *path_sizes);
+void		    ant_march(char ***paths, int ant_total);
+void    		single_file(char **path, int ant_total, int path_size);
+void   			 ant_turn(t_move *move, int next_ant, int path_size);
+void   			 ant_columns(t_march *move_out);
+void   			 columns(char ***paths, t_march *move_out);
+int    			 turn_total(t_march *move_out);
+void   			 turn_loop(t_march *move_out, t_move **moves);
+int    			 multi_move_check(t_move *move, int path_size);
+void    		out_loop(t_march *move_out, t_move **moves);
+t_move			*make_move(char **path, int path_size);
+t_move			**make_moves(char ***path, int *path_sizes, int route_total);
 void            move_output(t_move *move, int paths);
-void    free_paths(char ****paths_pointer);
-
-// // pathing alsitor
-
-// char			**ft_path(t_room *room);
-// char			**ft_excl_path(t_room *room);
-// char			**ft_minpath(t_room *rooms);
-// int		st_maxpaths(t_room *rooms);
-// void	st_pathclear(t_room *rooms);
-// char	***ft_pathfind(t_room *rooms);
-
+void    		free_paths(char ****paths_pointer);
 
 #endif

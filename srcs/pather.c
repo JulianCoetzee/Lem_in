@@ -50,33 +50,33 @@ int	*path_sizes(char ***routes, int route_total)
 
 int path_size_sum(int *path_sizes)
 {
-    int i;
-    int sum;
+	int i;
+	int sum;
 
-    i = 0;
-    sum = 0;
-    while (path_sizes[i])
-    {
-        sum = sum + path_sizes[i];
-        i++;
-    }
-    return (sum);
+	i = 0;
+	sum = 0;
+	while (path_sizes[i])
+	{
+		sum = sum + path_sizes[i];
+		i++;
+	}
+	return (sum);
 }
 
 int ant_routes_used(int ant_total, int *path_sizes)
 {
-    int i;
-    int routes;
+	int i;
+	int routes;
 
-    i = 1;
-    routes = 0;
-    if ((ant_total - i) + path_sizes[0] >= i + path_sizes[1])
-    {
-        while ((ant_total - i) + path_sizes[0] >= i + path_sizes[1])
-            i++;
-        routes++;
-    }
-    if (path_sizes[2])
-        routes = routes + ant_routes_used(i - 1, path_sizes + 1);
-    return (routes);
+	i = 1;
+	routes = 0;
+	if ((ant_total - i) + path_sizes[0] >= i + path_sizes[1])
+	{
+		while ((ant_total - i) + path_sizes[0] >= i + path_sizes[1])
+			i++;
+		routes++;
+	}
+	if (path_sizes[2])
+		routes = routes + ant_routes_used(i - 1, path_sizes + 1);
+	return (routes);
 }
