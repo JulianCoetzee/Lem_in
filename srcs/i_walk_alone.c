@@ -6,7 +6,7 @@
 /*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/17 18:57:11 by giantewok         #+#    #+#             */
-/*   Updated: 2020/05/18 11:43:12 by jules            ###   ########.fr       */
+/*   Updated: 2020/05/18 13:47:44 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,15 @@
 
 void	put_move(t_move *move, int dist)
 {
+	int	i;
+
+	i = 0;
 	while (dist--)
 	{
 		if (move[dist].ant)
 		{
+			if (i++)
+				ft_putchar(' ');
 			ft_putchar('L');
 			ft_putnbr((move[dist]).ant);
 			ft_putchar('-');
