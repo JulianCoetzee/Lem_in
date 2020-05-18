@@ -4,7 +4,7 @@
 // get_ants checks 1st line, 
 // if !digits or <0, exits with ERROR
 
-int     get_ants(void)
+int     			get_ants(void)
 {
 	long long   ants;
 	char        *line;
@@ -29,11 +29,23 @@ int     get_ants(void)
 	return (ants);
 }
 
+
+static void			map_error(int strt, int end, t_room **map)
+{
+	if (strt != -1 || end != -1 || is_duplicate(map) == 1)
+	{
+		free_map(map);
+		if (strt != -1 || end != -1)
+			error_out(2);
+		else
+			error_out(5);
+	}	
+}
 // get_map reads input and checks input validity
 // uses validate_line to check input
 // 1st line must be ants
 
-void    get_map(t_room **map)
+void   		 		get_map(t_room **map)
 {
 	char    *line;
 	int     start;
@@ -55,12 +67,5 @@ void    get_map(t_room **map)
 		ft_memdel((void**)&line);
 	}
 	ft_memdel((void**)&line);
-	if (start != -1 || end != -1 || is_duplicate(map) == 1)
-	{
-		free_map(map);
-		if (start != -1 || end != -1)
-			error_out(2);
-		else
-			error_out(5);
-	}
+	map_error(start, end, map);
 }
