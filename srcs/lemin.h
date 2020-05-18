@@ -1,6 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   lemin.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/17 18:56:12 by jules             #+#    #+#             */
+/*   Updated: 2020/05/17 20:58:33 by jules            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LEMIN_H
 # define LEMIN_H
 # include "../libft/libft.h"
+# define EMPTY 0
+# define RESET 0
 
 typedef struct  s_room
 {
@@ -73,15 +87,12 @@ void			multi_route(char ***route, t_march *march);
 void			put_iter(t_march *march, t_move **moves);
 void			turn_iter(t_march *march, t_move **moves);
 int				turn_quan(t_march *march);
-//path testing ish
-int				st_maxpaths(t_room *rooms);
-void			st_pathclear(t_room *rooms);
-void			st_findpaths(char ***paths, t_room *rooms);
-char			***ft_pathfind(t_room *rooms);
-//void			ft_printpath(char ***paths);
-// char			**ft_path(t_room *room);
-char			**ft_excl_path(t_room *room);
-char			**ft_minpath(t_room *rooms);
+// pathfinding
+char			**path_checker(t_room *room);
+int				all_paths(t_room *room);
+void			pathfinder(char ***all_paths, t_room *room);
+char			***paths_found(t_room *rooms);
+char			**get_paths(t_room *rooms);
 
 
 #endif

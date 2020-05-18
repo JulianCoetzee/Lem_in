@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   lemin.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/17 18:56:50 by jules             #+#    #+#             */
+/*   Updated: 2020/05/17 19:58:48 by jules            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "lemin.h"
 
 int		main(int argc, char **argv)
@@ -17,12 +29,11 @@ int		main(int argc, char **argv)
 		free_map(&map);
 		return (0);
 	}
-	if (!(route = ft_pathfind(map)))
+	if (!(route = paths_found(map)))
 	{
 		free_map(&map);
-		return(-1);
+		return (0);
 	}
-	ft_putchar('\n');
 	move_ant(route, ants);
 	free_map(&map);
 	free_route(&route);

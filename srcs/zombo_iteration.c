@@ -6,7 +6,7 @@
 /*   By: giantewok <giantewok@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/17 18:57:32 by giantewok         #+#    #+#             */
-/*   Updated: 2020/05/17 20:38:28 by giantewok        ###   ########.fr       */
+/*   Updated: 2020/05/18 10:32:30 by giantewok        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int			turn_quan(t_march *march)
 	while (march->dist[++i])
 		if (march->dist[i] + march->ants[i] > quant)
 			quant = march->dist[i] + march->ants[i];
-	return (quant);
+	return (quant - 1);
 }
 
 void		turn_iter(t_march *march, t_move **moves)

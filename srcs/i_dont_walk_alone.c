@@ -6,7 +6,7 @@
 /*   By: giantewok <giantewok@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/17 18:57:53 by giantewok         #+#    #+#             */
-/*   Updated: 2020/05/17 18:58:24 by giantewok        ###   ########.fr       */
+/*   Updated: 2020/05/18 10:32:47 by giantewok        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void			multi_route(char ***route, t_march *march)
 	{
 		turn_iter(march, moves);
 		put_iter(march, moves);
-		if (turns)
+		if (turns + 1)
 			ft_putchar('\n');
 	}
 	free_move_array(&moves);

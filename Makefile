@@ -26,8 +26,8 @@ LEMIN_SRCS = lemin.c\
 				i_dont_walk_alone.c\
 				two_roads_div.c\
 				zombo_iteration.c\
-				test_min_p.c\
-				test_path_f.c\
+				pathfinder.c\
+				paths.c\
 
 LEMIN_C = $(addprefix $(OBJS_PATH), $(LEMIN_SRCS))
 
