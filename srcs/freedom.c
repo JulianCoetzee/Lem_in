@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "lemin.h"
 
 //frees all items in array and then array pointer
@@ -60,12 +59,9 @@ void    free_links(t_room *room)
 {
 	free(room->links);
 	room->links = NULL;
-<<<<<<< HEAD
-=======
 }
 
 void    free_int_array(int **arr)
 {
 	ft_memdel((void**)arr);
->>>>>>> master
 }
