@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   king_jul.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: giantewok <giantewok@student.42.fr>        +#+  +:+       +#+        */
+/*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/17 18:56:39 by giantewok         #+#    #+#             */
-/*   Updated: 2020/05/17 20:16:40 by giantewok        ###   ########.fr       */
+/*   Updated: 2020/05/18 11:22:22 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static int  *route_dist(char ***route, int t)
 	
 	i = 0;
 	if (!(dist = (int*)ft_memalloc(sizeof(int) * (t + 1))))
-		ft_putendl("Could not malloc route len.");
+		error_out(4);
 	while (t > i)
 	{
 		dist[i] = room_num(route[i]);

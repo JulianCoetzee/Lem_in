@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   two_roads_div.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: giantewok <giantewok@student.42.fr>        +#+  +:+       +#+        */
+/*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/17 18:57:25 by giantewok         #+#    #+#             */
-/*   Updated: 2020/05/17 18:58:27 by giantewok        ###   ########.fr       */
+/*   Updated: 2020/05/18 11:42:38 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ int		route_quan(int n, int *dist)
 
 /*
 **sep_ant: splits ants up
-**
 */
+
 void    sep_ant(t_march *march)
 {
 	int i;

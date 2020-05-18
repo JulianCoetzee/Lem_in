@@ -27,15 +27,11 @@ int     			get_ants(void)
 	{
 		ft_memdel((void**)&line);
 		error_out(3);
-		exit(1);
 	}
 	ants = ft_atoll(line);
 	ft_memdel((void**)&line);
 	if (ants < 1)
-	{
 		error_out(3);
-		exit(1);
-	}
 	ft_putnbr(ants);
 	return (ants);
 }

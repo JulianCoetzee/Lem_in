@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   i_walk_alone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: giantewok <giantewok@student.42.fr>        +#+  +:+       +#+        */
+/*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/17 18:57:11 by giantewok         #+#    #+#             */
-/*   Updated: 2020/05/17 20:15:50 by giantewok        ###   ########.fr       */
+/*   Updated: 2020/05/18 11:43:12 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,15 @@
 
 void	put_move(t_move *move, int dist)
 {
-	int	i;
-
-	i = 0;
 	while (dist--)
 	{
 		if (move[dist].ant)
 		{
-			if (i++)
-				ft_putchar(' ');
 			ft_putchar('L');
 			ft_putnbr((move[dist]).ant);
 			ft_putchar('-');
 			ft_putstr((move[dist]).room);
 		}
-		if (dist == 0)
-			return ;
 	}
 }
 

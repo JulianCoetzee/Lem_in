@@ -15,19 +15,19 @@ LEMIN_SRCS = lemin.c\
 				error.c\
 				freedom.c\
 				freedomII.c\
+				i_walk_alone.c\
+				i_dont_walk_alone.c\
+				king_jul.c\
 				link_check.c\
 				links.c\
+				pathfinder.c\
+				paths.c\
 				reader.c\
 				room_check.c\
 				rooms.c\
-				validate_input.c\
-				king_jul.c\
-				i_walk_alone.c\
-				i_dont_walk_alone.c\
 				two_roads_div.c\
+				validate_input.c\
 				zombo_iteration.c\
-				pathfinder.c\
-				paths.c\
 
 LEMIN_C = $(addprefix $(OBJS_PATH), $(LEMIN_SRCS))
 
