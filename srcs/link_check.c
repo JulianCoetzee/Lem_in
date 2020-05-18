@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   link_check.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/05/17 18:57:46 by jules             #+#    #+#             */
+/*   Updated: 2020/05/17 19:01:04 by jules            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "lemin.h"
 
-//checks for valid link format before analyzing with subsequent functions ( links.c)
+//checks for valid link format before analyzing with sub func ( links.c)
 //via link_split
 
 int ft_links(t_room **map, char *line)

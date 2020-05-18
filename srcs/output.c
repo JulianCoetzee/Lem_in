@@ -1,48 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   freedomII.c                                        :+:      :+:    :+:   */
+/*   output.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/17 18:57:04 by jules             #+#    #+#             */
-/*   Updated: 2020/05/17 18:57:05 by jules            ###   ########.fr       */
+/*   Created: 2020/05/17 18:58:02 by jules             #+#    #+#             */
+/*   Updated: 2020/05/17 18:59:07 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lemin.h"
 
-void    free_move(t_move **move)
+void    move_output(t_move *move, int path_size)
 {
-	ft_memdel((void **)move);
-}
-
-void    free_move_array(t_move ***moves)
-{
-	int i;
-
-	i = 0;
-	while ((*moves)[i])
-	{
-		free_move(&(*moves)[i]);
-		i++;
-	}
-	free(*moves);
-	*moves = NULL;
-}
-
-void    free_paths(char ****paths_pointer)
-{
-	int i;
-	char ***paths;
-
-	paths = *paths_pointer;
-	i = 0;
-	while (paths[i])
-	{
-		free(paths[i]);
-		i++;
-	}
-	free(paths);
-	paths = NULL;
+    while (path_size--)
+    {
+        if (move[path_size].ant)
+        {
+            ft_putchar('L');
+            ft_putnbr(move[path_size].ant);
+            ft_putchar('-');
+            ft_putstr(move[path_size].room);
+        }            
+    }
 }
