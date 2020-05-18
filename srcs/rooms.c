@@ -56,7 +56,7 @@ void    del_room(t_room **map)
 	t_room  *room;
 	t_room  *second;
 
-	if (*map == NULL)
+	if (*map == NULL)     
 		return ;
 	while (room != NULL)
 	{

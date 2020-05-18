@@ -15,8 +15,8 @@
 int		main(int argc, char **argv)
 {
 	int		ants;
-	char 	***paths;
 	t_room	*map;
+	char	***route;
 
 	(void)argv;
 	(void)argc;
@@ -29,13 +29,13 @@ int		main(int argc, char **argv)
 		free_map(&map);
 		return (0);
 	}
-	if (!(paths = paths_found(map)))
+	if (!(route = paths_found(map)))
 	{
 		free_map(&map);
 		return (0);
 	}
-	ant_march(paths, ants);
+	move_ant(route, ants);
 	free_map(&map);
-	free_paths(&paths);
+	free_route(&route);
 	return (0);
 }

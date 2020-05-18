@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "lemin.h"
 
 //frees all items in array and then array pointer

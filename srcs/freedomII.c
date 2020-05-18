@@ -31,12 +31,12 @@ void    free_move_array(t_move ***moves)
 	*moves = NULL;
 }
 
-void    free_paths(char ****paths_pointer)
+void    free_route(char ****route_loc)
 {
 	int i;
 	char ***paths;
 
-	paths = *paths_pointer;
+	paths = *route_loc;
 	i = 0;
 	while (paths[i])
 	{

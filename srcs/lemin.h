@@ -37,15 +37,14 @@ typedef struct s_move
 typedef struct  s_march
 {
     int			i;
-	int			path_size_sum;
-	int			route_total;
-	int			ant_total;
+	int			route_dist_tot;
+	int			route_tot;
+	int			ant_tot;
 	int			*ants;
-	int			*path_sizes;
+	int			*dist;
 }               t_march;
 
-void            add_links(t_room ***tmp_links, t_room ***set_links,
-								 t_room **door, int array_size);
+void            add_links(t_room ***tmp_links, t_room ***set_links, t_room **door, int array_size);
 t_room          *add_room(t_room **map);
 int             check_co_ords(char **arr);
 void            command_check(t_room **room, int *start, int *end);
@@ -67,37 +66,33 @@ void            get_map(t_room **map);
 int             is_duplicate(t_room **map);
 int             link_array(t_room **room, t_room **door);
 int             link_split(t_room **map, char *line);
+void            move_out(t_move *move, int paths);
 t_room          *new_room(void);
 int		        validate_line(t_room **map, char *line, int *start, int *end);
 int             valid_format(t_room **map, char *line, int *start, int *end);
-
+//marchy
+void			free_int_array(int **array);
+void			free_march_array(t_march *march);
+void			move_ant(char ***route, int i_ant);
+void    		sep_ant(t_march *march);
+int				route_quan(int n, int *dist);
+void			free_route(char ****route_loc);
+//movey single
+void			sing_route(char **route, int i_ant, int dist);
+void			ant_turn(t_move *move, int i, int dist);
+t_move			*make_move(char **route, int dist);
+void			put_move(t_move *move, int dist);
+//movey multo
+void			multi_route(char ***route, t_march *march);
+void			put_iter(t_march *march, t_move **moves);
+void			turn_iter(t_march *march, t_move **moves);
+int				turn_quan(t_march *march);
 // pathfinding
-
 char			**path_checker(t_room *room);
 int				all_paths(t_room *room);
 void			pathfinder(char ***all_paths, t_room *room);
 char			***paths_found(t_room *rooms);
 char			**get_paths(t_room *rooms);
 
-//fail safe tests
-
-int				path_count(char ***routes);
-int				path_size(char **path);
-int				*path_sizes(char ***routes, int route_total);
-int 			path_size_sum(int *path_sizes);
-int 			ant_routes_used(int ant_total, int *path_sizes);
-void		    ant_march(char ***paths, int ant_total);
-void    		single_file(char **path, int ant_total, int path_size);
-void   			 ant_turn(t_move *move, int next_ant, int path_size);
-void   			 ant_columns(t_march *move_out);
-void   			 columns(char ***paths, t_march *move_out);
-int    			 turn_total(t_march *move_out);
-void   			 turn_loop(t_march *move_out, t_move **moves);
-int    			 multi_move_check(t_move *move, int path_size);
-void    		out_loop(t_march *move_out, t_move **moves);
-t_move			*make_move(char **path, int path_size);
-t_move			**make_moves(char ***path, int *path_sizes, int route_total);
-void            move_output(t_move *move, int paths);
-void    		free_paths(char ****paths_pointer);
 
 #endif

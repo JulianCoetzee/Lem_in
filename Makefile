@@ -1,4 +1,4 @@
-NAME = lemin
+NAME = lem-in
 
 LIB_PATH = ./libft/
 
@@ -10,7 +10,7 @@ OBJS_PATH = ./objs/
 
 OBJS_DIR = objs
 
-LEMIN_SRCS = $(NAME).c\
+LEMIN_SRCS = lemin.c\
 				duplicate_check.c\
 				error.c\
 				freedom.c\
@@ -21,13 +21,13 @@ LEMIN_SRCS = $(NAME).c\
 				room_check.c\
 				rooms.c\
 				validate_input.c\
+				king_jul.c\
+				i_walk_alone.c\
+				i_dont_walk_alone.c\
+				two_roads_div.c\
+				zombo_iteration.c\
 				pathfinder.c\
 				paths.c\
-				march.c\
-				moves.c\
-				output.c\
-				pather.c\
-				turns.c\
 
 LEMIN_C = $(addprefix $(OBJS_PATH), $(LEMIN_SRCS))
 

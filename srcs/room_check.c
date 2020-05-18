@@ -55,7 +55,7 @@ void    command_check(t_room **room, int *start, int *end)
 		*end = -1;
 	}
 	else
-		(*room)->start = 0;
+		(*room)->start = 0;    
 }
 
 // checks coordinates for digits only

@@ -15,7 +15,7 @@
 // check for: open lines, (##)both command lines, (#)comment line
 // checks line format with valid_format
 
-int validate_line(t_room **map, char *line, int *start, int *end)
+int 		validate_line(t_room **map, char *line, int *start, int *end)
 {
 	int         valid;
 	static int  command_line;
@@ -42,12 +42,16 @@ int validate_line(t_room **map, char *line, int *start, int *end)
 		return (valid);
 	}
 }
-
+static int		not_valid(char **array)
+{
+	free_array(array);
+	return (0);
+}
 // splits read line into array
 // count array size (1 = link, 3 = room), error if not
 // checks valid sizes with further functions
 
-int valid_format(t_room **map, char *line, int *start, int *end)
+int				 valid_format(t_room **map, char *line, int *start, int *end)
 {
 	char        **arr;
 	int         i;
@@ -59,10 +63,7 @@ int valid_format(t_room **map, char *line, int *start, int *end)
 	while (arr[i] != NULL)
 		i++;
 	if (i != 1 && i != 3)
-	{
-		free_array(arr);
-		return (0);
-	}
+		not_valid(arr);
 	else if (i == 3)
 	{
 		if (!ft_rooms(map, arr, start, end) || link == 1)
