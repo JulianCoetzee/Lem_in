@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pathfinder.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: giantewok <giantewok@student.42.fr>        +#+  +:+       +#+        */
+/*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/17 12:16:49 by jenmike           #+#    #+#             */
-/*   Updated: 2020/05/18 10:47:37 by giantewok        ###   ########.fr       */
+/*   Updated: 2020/05/20 11:22:55 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int		all_paths(t_room *room)
 		room = room->next;
 	check = room->start;	
     i = RESET;
-	if (!room)
+	if (!room || !room->links)
 		return (0);
     while (room->links[i])
 		i++;

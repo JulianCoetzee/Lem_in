@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   paths.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: giantewok <giantewok@student.42.fr>        +#+  +:+       +#+        */
+/*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/17 12:04:57 by jenmike           #+#    #+#             */
-/*   Updated: 2020/05/18 10:47:09 by giantewok        ###   ########.fr       */
+/*   Updated: 2020/05/20 11:10:50 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,7 @@ char			**get_paths(t_room *rooms)
 		if (length == 0 && t_new_room)
 			t_new_room->prev = NULL;
 		if (t_new_room && t_new_room->start != -1)
-		{
-				pnf = put_linklen(&t_new_room, length);
-		}
+			pnf = put_linklen(&t_new_room, length);
 		else if (t_new_room)
 			return (path_checker(t_new_room));
 		if (!t_new_room && ++length)
